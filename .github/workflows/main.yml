@@ -1,9 +1,9 @@
 name: build and deploy spring-api
 on:
   push:
-    branches: [main]
+    branches: [deploy-aws-ec2]
   pull_request:
-    branches: [main]
+    branches: [deploy-aws-ec2]
 
 jobs:
   build:
