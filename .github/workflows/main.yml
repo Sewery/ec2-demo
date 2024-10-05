@@ -21,7 +21,7 @@ jobs:
       - name: build the app
         run: |
           mkdir -p builder
-          cd /builder
+          cd ./builder
           mvn clean
           mvn install -DskipTests --file pom.xml
           
