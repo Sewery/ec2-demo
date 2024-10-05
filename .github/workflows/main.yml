@@ -23,7 +23,7 @@ jobs:
           mkdir -p builder
           cd ./builder
           mvn clean
-          mvn install -DskipTests --file pom.xml
+          mvn install -DskipTests --file ../pom.xml
           
 
       - name: build the docker image
