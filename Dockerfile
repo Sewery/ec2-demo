@@ -1,0 +1,9 @@
+FROM amazoncorretto:21
+WORKDIR /app
+ARG PROFILE=ACTIVE
+ARG APP_VERSION=1.0.0
+ENV JAR_VERSION=${APP_VERSION}
+ENV ACRIVE_PROFILE=${PROFILE}
+EXPOSE 8888
+COPY  builder/target/ec2-demo-*.jar /app/
+CMD java -jar ec2-demo-${JAR_VERSION}.jar
