@@ -52,4 +52,4 @@ jobs:
       - name: Pull Image from docker hub
         run: docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/ec2-demo:latest
       - name: Run docker container
-        run: docker run -d -p 8080:8080 --name ec2-demo-container
+        run: docker run -d -p 8080:8080 --name ec2-demo-container ${{ secrets.DOCKER_HUB_USERNAME }}/ec2-demo:latest
